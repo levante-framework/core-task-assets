@@ -1,0 +1,6 @@
+
+Constant(name=<RuleType.CONSTANT: 1>, attr=<AttributeType.CONFIGURATION: 8>, params=None, value=None)
+Progression(name=<RuleType.PROGRESSION: 2>, attr=<AttributeType.SHAPE: 2>, params=[-2, -1, 1, 2], value=-1)
+Constant(name=<RuleType.CONSTANT: 1>, attr=<AttributeType.SIZE: 3>, params=None, value=None)
+Arithmetic(name=<RuleType.ARITHMETIC: 3>, attr=<AttributeType.COLOR: 4>, params=[-1, 1], value=1)
+

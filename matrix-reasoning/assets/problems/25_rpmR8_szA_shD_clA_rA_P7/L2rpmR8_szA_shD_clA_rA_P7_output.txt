@@ -1,0 +1,6 @@
+
+Constant(name=<RuleType.CONSTANT: 1>, attr=<AttributeType.CONFIGURATION: 8>, params=None, value=None)
+DistributeThree(name=<RuleType.DISTRIBUTE_THREE: 4>, attr=<AttributeType.SHAPE: 2>, params=None, value=None)
+Arithmetic(name=<RuleType.ARITHMETIC: 3>, attr=<AttributeType.SIZE: 3>, params=[-1, 1], value=-1)
+Arithmetic(name=<RuleType.ARITHMETIC: 3>, attr=<AttributeType.COLOR: 4>, params=[-1, 1], value=-1)
+

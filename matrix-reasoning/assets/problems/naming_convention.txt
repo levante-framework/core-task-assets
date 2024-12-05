@@ -1,0 +1,9 @@
+### Naming of stimuli
+#
+# R = rule; P = Problem
+## cl = color, sh = shape, sz = size, num = number, pos = position (all = all, r = rest)
+### C = constant; P = progression; A = arithmetic; D = dist3
+#
+# the color is arithmetic (i.e., clA) this means color is noise
+# Example:
+# R4_aSZ_cR_P1_alternative2 (rule 1, arithmetic size, constant rest, Problem 1, Alternative 2)
