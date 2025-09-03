@@ -1,0 +1,21 @@
+WEBP conversion complete at 2025-09-03T17:30:56.665Z
+Quality: 85
+Files converted (success): 3399
+Files failed: 0
+Total original size: 511.82 MB (536683782 bytes)
+Total WEBP size: 70.72 MB (74152160 bytes)
+Total delta: -462531622.00 B (-462531622 bytes, -86.18%)
+
+By top-level directory:
+- TROG: 854 files | 230.73 MB -> 33.34 MB | -206982974.00 B (-85.55%)
+- dashboard: 15 files | 1.88 MB -> 222.11 KB | -1741133.00 B (-88.45%)
+- hearts-and-flowers: 38 files | 692.05 KB -> 353.15 KB | -347032.00 B (-48.97%)
+- intro: 8 files | 1.14 MB -> 253.67 KB | -934890.00 B (-78.26%)
+- math: 28 files | 3.19 MB -> 333.57 KB | -2999375.00 B (-89.78%)
+- matrix-reasoning: 341 files | 2.92 MB -> 2.10 MB | -863078.00 B (-28.19%)
+- memory-game: 34 files | 1.43 MB -> 448.54 KB | -1041735.00 B (-69.40%)
+- mental-rotation: 288 files | 6.29 MB -> 3.54 MB | -2884714.00 B (-43.71%)
+- same-different-selection: 770 files | 1.09 MB -> 1.17 MB | 78.63 KB (7.02%)
+- shared: 17 files | 1.19 MB -> 281.27 KB | -956329.00 B (-76.85%)
+- theory-of-mind: 324 files | 243.04 MB -> 18.77 MB | -235163365.00 B (-92.28%)
+- vocab: 682 files | 18.25 MB -> 9.96 MB | -8697518.00 B (-45.45%)
