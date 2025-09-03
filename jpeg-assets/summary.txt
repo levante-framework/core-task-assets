@@ -1,0 +1,21 @@
+JPEG conversion complete at 2025-09-03T15:53:49.201Z
+Quality: 85
+Files converted (success): 3399
+Files failed: 0
+Total original size: 511.82 MB (536683782 bytes)
+Total JPEG size: 96.39 MB (101067089 bytes)
+Total delta: -435616693.00 B (-435616693 bytes, -81.17%)
+
+By top-level directory:
+- TROG: 854 files | 230.73 MB -> 43.89 MB | -195914088.00 B (-80.98%)
+- dashboard: 15 files | 1.88 MB -> 385.41 KB | -1573916.00 B (-79.95%)
+- hearts-and-flowers: 38 files | 692.05 KB -> 466.97 KB | -230480.00 B (-32.52%)
+- intro: 8 files | 1.14 MB -> 327.18 KB | -859614.00 B (-71.96%)
+- math: 28 files | 3.19 MB -> 525.55 KB | -2802794.00 B (-83.89%)
+- matrix-reasoning: 341 files | 2.92 MB -> 3.72 MB | 818.21 KB (27.36%)
+- memory-game: 34 files | 1.43 MB -> 684.46 KB | -800153.00 B (-53.31%)
+- mental-rotation: 288 files | 6.29 MB -> 4.76 MB | -1612270.00 B (-24.43%)
+- same-different-selection: 770 files | 1.09 MB -> 3.02 MB | 1.92 MB (175.58%)
+- shared: 17 files | 1.19 MB -> 363.68 KB | -871939.00 B (-70.07%)
+- theory-of-mind: 324 files | 243.04 MB -> 27.99 MB | -225492236.00 B (-88.48%)
+- vocab: 682 files | 18.25 MB -> 10.32 MB | -8312112.00 B (-43.44%)
