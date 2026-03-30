@@ -40,6 +40,32 @@ function mapAssetDirToTaskName(assetDir) {
   return mapping[assetDir] || assetDir;
 }
 
+// Convert names like "theoryOfMind" -> "theory-of-mind"
+function toKebabCase(name) {
+  return String(name)
+    .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
+    .replace(/_/g, '-')
+    .toLowerCase();
+}
+
+// Resolve to the actual task directory key used in core-tasks
+function resolveTaskImplementationKey(assetTaskName, mappedTaskName, availableTasks) {
+  const candidates = [
+    assetTaskName,
+    mappedTaskName,
+    toKebabCase(mappedTaskName),
+    toKebabCase(assetTaskName)
+  ].filter(Boolean);
+
+  for (const candidate of candidates) {
+    if (availableTasks.includes(candidate)) {
+      return candidate;
+    }
+  }
+
+  return null;
+}
+
 // Function to find task configuration files in core-tasks
 function findTaskConfigurations() {
   const coreTasksPath = '../core-tasks/task-launcher/src/tasks';
@@ -293,7 +319,9 @@ async function findHighResolutionImagesWithTaskMapping(dir = '.') {
             // Extract task name from the path
             const pathParts = originalDir.split(path.sep);
             const assetTaskName = pathParts[pathParts.length - 2]; // Parent directory of 'original'
-            const coreTaskName = mapAssetDirToTaskName(assetTaskName);
+            const mappedTaskName = mapAssetDirToTaskName(assetTaskName);
+            const taskImplementationKey = resolveTaskImplementationKey(assetTaskName, mappedTaskName, availableTasks);
+            const coreTaskName = taskImplementationKey || mappedTaskName;
             
             // Extract item-level information from filename
             const itemInfo = extractItemInfo(pngFile, assetTaskName);
@@ -307,7 +335,7 @@ async function findHighResolutionImagesWithTaskMapping(dir = '.') {
               size: stats.size,
               lastModified: stats.mtime.toISOString(),
               source: 'original-directory',
-              hasTaskImplementation: availableTasks.includes(coreTaskName),
+              hasTaskImplementation: taskImplementationKey !== null,
               // Item-level details
               itemNumber: itemInfo.itemNumber,
               variant: itemInfo.variant,
@@ -359,7 +387,9 @@ async function findHighResolutionImagesWithTaskMapping(dir = '.') {
         // Only include high-resolution images (>=1000px width)
         if (dimensions.width >= 1000) {
           const stats = fs.statSync(filePath);
-          const coreTaskName = mapAssetDirToTaskName(dirName);
+          const mappedTaskName = mapAssetDirToTaskName(dirName);
+          const taskImplementationKey = resolveTaskImplementationKey(dirName, mappedTaskName, availableTasks);
+          const coreTaskName = taskImplementationKey || mappedTaskName;
           
           // Extract item-level information from filename
           const filename = path.basename(filePath);
@@ -374,7 +404,7 @@ async function findHighResolutionImagesWithTaskMapping(dir = '.') {
             size: stats.size,
             lastModified: stats.mtime.toISOString(),
             source: 'high-resolution-scan',
-            hasTaskImplementation: availableTasks.includes(coreTaskName),
+            hasTaskImplementation: taskImplementationKey !== null,
             // Item-level details
             itemNumber: itemInfo.itemNumber,
             variant: itemInfo.variant,
